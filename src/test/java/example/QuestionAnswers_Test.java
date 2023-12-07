@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class QuestionAnswers_Test {
     private QuestionAnswers qa;
@@ -74,16 +74,16 @@ public class QuestionAnswers_Test {
         qa.addQuestionAnswers(q3, a3);
 
         boolean answer1 = qa.containsQuestion(q1);
-        assertEquals(answer1, true);
+        assertTrue(answer1);
 
         boolean answer2 = qa.containsQuestion(q1);
-        assertEquals(answer2, true);
+        assertTrue(answer2);
 
         boolean answer3 = qa.containsQuestion(q1);
-        assertEquals(answer3, true);
+        assertTrue(answer3);
 
         boolean answer4 = qa.containsQuestion("What is Peters favorite city?");
-        assertEquals(answer4, false);
+        assertFalse(answer4);
 
     }
 
